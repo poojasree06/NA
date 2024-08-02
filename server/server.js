@@ -1,10 +1,8 @@
 const cors = require('cors');
 const express = require('express');
 const mongoose = require('mongoose');
-const { MongoClient, ServerApiVersion } = require('mongodb');
 require('dotenv').config();
 
-// console.log("backend")
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
@@ -75,13 +73,13 @@ const createVideo = async (req, res, next) => {
 };
 
 // Main
-app.get('/', async (req, res) => {
-  try {
-    res.status(200).send("Landing Page")
-  } catch (error) {
-    res.status(500).send(error.message);
-  }
-});
+// app.get('/', async (req, res) => {
+//   try {
+//     res.status(200).send("Landing Page")
+//   } catch (error) {
+//     res.status(500).send(error.message);
+//   }
+// });
 
 // Routes
 app.post("/api/videos", createVideo);

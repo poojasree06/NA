@@ -34,7 +34,7 @@ const UploadForm = () => {
     try {
       const imgUrl = await uploadFile('image');
       const videoUrl = await uploadFile('video');
-      const res = await axios.post('http://localhost:5000/api/videos', { imgUrl, videoUrl, title, description });
+      const res = await axios.post('https://na-2.onrender.com/api/videos', { imgUrl, videoUrl, title, description });
       setThumbnail(null);
       setVideo(null);
       console.log("success");

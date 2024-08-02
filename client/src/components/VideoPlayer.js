@@ -9,7 +9,7 @@ const VideoPlayer = () => {
 
   useEffect(() => {
     const fetchVideo = async () => {
-      const response = await axios.get(`http://localhost:5000/api/get_videos/${id}`);
+      const response = await axios.get(`https://na-2.onrender.com/api/get_videos/${id}`);
       setVideo(response.data);
     };
 
